@@ -1,0 +1,461 @@
+{
+	"info": {
+		"_postman_id": "4aa25f62-5ffa-435d-a3d9-b6adf694ef17",
+		"name": "Anel Proshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40236100",
+		"_collection_link": "https://www.postman.com/api666-0741/workspace/anel-api/collection/40236100-4aa25f62-5ffa-435d-a3d9-b6adf694ef17?action=share&source=collection_link&creator=40236100"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "tas.20at@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "anel",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.atlan-testit.kz/api/users/register/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"atlan-testit",
+								"kz"
+							],
+							"path": [
+								"api",
+								"users",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "tas.20at@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.atlan-testit.kz/api/users/login/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"atlan-testit",
+								"kz"
+							],
+							"path": [
+								"api",
+								"users",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.atlan-testit.kz/api/users/profile/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"atlan-testit",
+								"kz"
+							],
+							"path": [
+								"api",
+								"users",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "nelya",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "rgfdgx@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "154",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.atlan-testit.kz/api/users/profile/update/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"atlan-testit",
+								"kz"
+							],
+							"path": [
+								"api",
+								"users",
+								"profile",
+								"update",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "main page",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.atlan-testit.kz/api/products/?page=4",
+							"protocol": "https",
+							"host": [
+								"api",
+								"atlan-testit",
+								"kz"
+							],
+							"path": [
+								"api",
+								"products",
+								""
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "top",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.atlan-testit.kz/api/products/top/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"atlan-testit",
+								"kz"
+							],
+							"path": [
+								"api",
+								"products",
+								"top",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get book by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.atlan-testit.kz/api/products/757",
+							"protocol": "https",
+							"host": [
+								"api",
+								"atlan-testit",
+								"kz"
+							],
+							"path": [
+								"api",
+								"products",
+								"757"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reviews",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "rating",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "didnt like",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.atlan-testit.kz/api/products/757/reviews/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"atlan-testit",
+								"kz"
+							],
+							"path": [
+								"api",
+								"products",
+								"757",
+								"reviews",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "place order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"itemPrice\": \"1000.00\",\r\n    \"orderItems\": [\r\n    {\r\n        \"countInStock\": 404,\r\n        \"image\": \"/images/R.jpg\",\r\n        \"name\": \"Цена Империи\",\r\n        \"price\": \"1000.00\",\r\n        \"product\": 635,\r\n        \"qty\": 1        \r\n    }],\r\n    \"paymentMethod\": \"Paypal\",\r\n    \"shippingAddress\": {\r\n        \"address\": \"sauran\", \r\n        \"city\": \"astana\", \r\n        \"postalCode\": \"070000\", \r\n        \"country\": \"kaz\"\r\n    },\r\n    \"shippingPrice\": \"10.00\",\r\n    \"taxPrice\": \"82.00\",\r\n    \"totalPrice\": \"12.00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.atlan-testit.kz/api/orders/add/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"atlan-testit",
+								"kz"
+							],
+							"path": [
+								"api",
+								"orders",
+								"add",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my orders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.atlan-testit.kz/api/orders/myorders/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"atlan-testit",
+								"kz"
+							],
+							"path": [
+								"api",
+								"orders",
+								"myorders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get order by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.atlan-testit.kz/api/orders/:id",
+							"protocol": "https",
+							"host": [
+								"api",
+								"atlan-testit",
+								"kz"
+							],
+							"path": [
+								"api",
+								"orders",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "4524"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api.atlan-testit.kz/api"
+		},
+		{
+			"key": "token",
+			"value": "{{vault:json-web-token}}"
+		}
+	]
+}
