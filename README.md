@@ -26,10 +26,7 @@ Contains examples of test cases, checklists, and bug reports. Includes real-worl
 Postman collections, automated API test scripts, and examples of API documentation.
 
 ### Automated Testing
-Code samples for Selenium, Cypress, and other automation frameworks. Includes test reports and examples.
-
-### Other
-Additional resources, such as certificates, notes on testing theory, and Agile practices.
+Code samples for Selenium, Cypress, and other automation frameworks. 
 
 ---
 
